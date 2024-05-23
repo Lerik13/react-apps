@@ -1,14 +1,14 @@
-import { useState } from "react";
 import './index.css';
-import { tempMovieData, tempWatchedData } from './data.js';
-import NavBar from "./components/NavBar.js";
-
+import { NavBar } from "./components/NavBar.js";
+import { ListBox } from './components/ListBox.js';
 
 function App() {
-
 	return (
 		<div>
 			<NavBar />
+			<main className="main">
+				<ListBox />
+			</main>
 		</div>
 	);
 }
