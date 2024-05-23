@@ -1,6 +1,7 @@
 import './index.css';
 import { NavBar } from "./components/NavBar.js";
 import { ListBox } from './components/ListBox.js';
+import { WatchedBox } from './components/WatchedBox.js';
 
 function App() {
 	return (
@@ -8,6 +9,7 @@ function App() {
 			<NavBar />
 			<main className="main">
 				<ListBox />
+				<WatchedBox />
 			</main>
 		</div>
 	);
