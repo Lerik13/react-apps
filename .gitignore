@@ -3,6 +3,7 @@
 # dependencies
 /node_modules
 /movies-project/node_modules
+/mix-components/node_modules
 /.pnp
 .pnp.js
 
