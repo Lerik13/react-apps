@@ -1,6 +1,5 @@
 import { useState } from "react";
 import './index.css';
-//import { NavBar } from "./components/NavBar.js";
 import { ListBox, MovieList } from './components/ListBox.js';
 import { WatchedMoviesList, WatchedSummary } from './components/WatchedBox.js';
 import { tempMovieData, tempWatchedData } from './data.js';
@@ -19,7 +18,6 @@ function App() {
 				<ListBox>
 					<MovieList movies={movies} />
 				</ListBox>
-
 				<ListBox>
 					<WatchedSummary watched={watched} />
 					<WatchedMoviesList watched={watched} />
