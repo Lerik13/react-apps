@@ -2,6 +2,9 @@ import { useState } from "react";
 import './styles-text-expander.css';
 import TextExpander from './components/TextExpander';
 import StarRating from './components/StarRating';
+import { faqs } from './data-accordion.js';
+import './styles-accordion.css';
+import Accordion from './components/Accordion';
 
 function App() {
 	const [rate, setRate] = useState(0);
@@ -48,6 +51,10 @@ function App() {
 			*/}
 		</div>
 
+		<div>
+			<h2>FAQ Accordion component</h2>
+			<Accordion data={faqs} />
+		</div>
 	</>);
 }
 
