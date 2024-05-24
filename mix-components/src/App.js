@@ -1,16 +1,20 @@
 import { useState } from "react";
+import './styles.css';
 import './styles-text-expander.css';
 import TextExpander from './components/TextExpander';
 import StarRating from './components/StarRating';
 import { faqs } from './data-accordion.js';
 import './styles-accordion.css';
 import Accordion from './components/Accordion';
+import './styles-tab.css';
+import { content as tab_content } from './data-tabs.js';
+import { Tabbed } from "./components/Tabbed.js";
 
 function App() {
 	const [rate, setRate] = useState(0);
 
 	return (<>
-		<div>
+		<div className="text-expander">
 			<h2>Text Expander component</h2>
 			<TextExpander>
 				Space travel is the ultimate adventure! Imagine soaring past the stars
@@ -54,6 +58,11 @@ function App() {
 		<div>
 			<h2>FAQ Accordion component</h2>
 			<Accordion data={faqs} />
+		</div>
+
+		<div>
+			<h2>Tabs</h2>
+			<Tabbed content={tab_content} />
 		</div>
 	</>);
 }

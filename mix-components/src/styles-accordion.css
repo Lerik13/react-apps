@@ -1,24 +1,13 @@
-* {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-}
-
-body {
-	font-family: sans-serif;
-	color: #343a40;
-	line-height: 1;
-}
-
 .accordion {
+	color: #343a40;
 	width: 700px;
-	margin: 100px auto;
+	margin: 20px auto;
 	display: flex;
 	flex-direction: column;
 	gap: 24px;
 }
 
-.item {
+.accordion .item {
 	box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
 	padding: 20px 24px;
 	padding-right: 48px;
@@ -33,25 +22,25 @@ body {
 	align-items: center;
 }
 
-.number {
+.accordion .number {
 	font-size: 24px;
 	font-weight: 500;
 	color: #ced4da;
 }
 
-.title,
-.icon {
+.accordion .title,
+.accordion .icon {
 	font-size: 24px;
 	font-weight: 500;
 }
 
-.content-box {
+.accordion .content-box {
 	grid-column: 2 / -1;
 	padding-bottom: 16px;
 	line-height: 1.6;
 }
 
-.content-box ul {
+.accordion .content-box ul {
 	color: #868e96;
 	margin-left: 16px;
 	margin-top: 16px;
@@ -62,11 +51,11 @@ body {
 }
 
 /* OPEN STATE */
-.open {
+.accordion .open {
 	border-top: 4px solid #087f5b;
 }
 
-.open .number,
-.open .title {
+.accordion .open .number,
+.accordion .open .title {
 	color: #087f5b;
 }
