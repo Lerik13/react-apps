@@ -1,7 +1,5 @@
-import React from 'react'
-
 export const Loader = () => {
 	return (
-		<p>Loading...</p>
+		<p className='loader'>Loading...</p>
 	)
 }
