@@ -1,28 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import './index.css';
 import { ListBox, MovieList } from './components/ListBox.js';
 import { WatchedMoviesList, WatchedSummary } from './components/WatchedBox.js';
-import { Loader } from "./components/Loader.js";
-
-const I_KEY = "tt3896198";
-const KEY = "d0b3ba81";
+import { tempMovieData, tempWatchedData } from './data.js';
 
 function App() {
-	const [movies, setMovies] = useState([]);
-	const [watched, setWatched] = useState([]);
-	const [isLoading, setIsLoading] = useState(false);
-	const query = "interstellar";
-
-	useEffect(() => {
-		setIsLoading(true);
-		async function fetchMovies() {
-			const res = await fetch(`http://www.omdbapi.com/?i=${I_KEY}&apikey=${KEY}&s=${query}`);
-			const data = await res.json();
-			setMovies(data.Search);
-			setIsLoading(false);
-		}
-		fetchMovies();
-	}, [])
+	const [movies, setMovies] = useState(tempMovieData);
+	const [watched, setWatched] = useState(tempWatchedData);
 
 	return (
 		<div>
@@ -32,7 +16,7 @@ function App() {
 			</NavBar>
 			<main className="main">
 				<ListBox>
-					{isLoading ? <Loader />: <MovieList movies={movies} />}
+					<MovieList movies={movies} />
 				</ListBox>
 				<ListBox>
 					<WatchedSummary watched={watched} />
