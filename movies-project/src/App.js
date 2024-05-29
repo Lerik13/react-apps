@@ -1,13 +1,11 @@
 import { useState, useEffect } from "react";
 import './index.css';
+import { API_URL } from './constants.js';
 import { ListBox, MovieList } from './components/ListBox.js';
 import { WatchedMoviesList, WatchedSummary } from './components/WatchedBox.js';
 import { Loader } from "./components/Loader.js";
 import ErrorMessage from "./components/ErrorMessage.js";
 import MovieDetails from "./components/MovieDetails.js";
-
-const I_KEY = "tt3896198";
-const KEY = "d0b3ba81";
 
 function App() {
 	const [query, setQuery] = useState("");
@@ -30,7 +28,7 @@ function App() {
 			try {
 				setIsLoading(true);
 				setError("");
-				const res = await fetch(`http://www.omdbapi.com/?i=${I_KEY}&apikey=${KEY}&s=${query}`);
+				const res = await fetch(`${API_URL}&s=${query}`);
 	
 				if (!res.ok)
 					throw new Error("Something went wrong with fetching movies")
