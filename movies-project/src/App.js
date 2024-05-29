@@ -4,6 +4,7 @@ import { ListBox, MovieList } from './components/ListBox.js';
 import { WatchedMoviesList, WatchedSummary } from './components/WatchedBox.js';
 import { Loader } from "./components/Loader.js";
 import ErrorMessage from "./components/ErrorMessage.js";
+import MovieDetails from "./components/MovieDetails.js";
 
 const I_KEY = "tt3896198";
 const KEY = "d0b3ba81";
@@ -14,6 +15,15 @@ function App() {
 	const [watched, setWatched] = useState([]);
 	const [isLoading, setIsLoading] = useState(false);
 	const [error, setError] = useState("");
+	const [selectedId, setSelectedId] = useState(null);
+
+	function handleSelectMovie(id) {
+		setSelectedId(selectedId => id === selectedId ? null : id);
+	}
+
+	function handleCloseMovie() {
+		setSelectedId(null);
+	}
 
 	useEffect(() => {
 		async function fetchMovies() {
@@ -57,12 +67,19 @@ function App() {
 			<main className="main">
 				<ListBox>
 					{isLoading && <Loader />}
-					{!isLoading && !error && <MovieList movies={movies} />}
+					{!isLoading && !error && <MovieList movies={movies} onSelectMovie={handleSelectMovie} />}
 					{error && <ErrorMessage message={error} />}
 				</ListBox>
 				<ListBox>
-					<WatchedSummary watched={watched} />
-					<WatchedMoviesList watched={watched} />
+					{selectedId ? (
+						<MovieDetails
+							selectedId={selectedId}
+							onCloseMovie={handleCloseMovie}
+						/>
+					) : (<>
+							<WatchedSummary watched={watched} />
+							<WatchedMoviesList watched={watched} />
+					</>)}
 				</ListBox>
 			</main>
 		</div>
