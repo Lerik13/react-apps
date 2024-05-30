@@ -50,8 +50,8 @@ function App() {
 
 				setMovies(data.Search);
 			} catch (error) {
-				console.error(error.message);
 				if (error.name !== "AbortError") {
+					console.log(error.message);
 					setError(error.message);
 				}
 			} finally {
@@ -65,6 +65,7 @@ function App() {
 			return ;
 		}
 
+		handleCloseMovie();
 		fetchMovies();
 
 		return () => {
