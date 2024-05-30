@@ -1,5 +1,5 @@
 const average = (arr) => {
-	return arr.reduce((acc, cur, i, arr) => acc + cur / arr.length, 0);
+	return Number.parseFloat(arr.reduce((acc, cur, i, arr) => acc + cur / arr.length, 0)).toFixed(2);
 }
 
 export function WatchedSummary({ watched }) {
@@ -45,8 +45,8 @@ export function WatchedMoviesList({ watched }) {
 function WatchedMovie({ movie }) {
 	return (
 		<li>
-			<img src={movie.Poster} alt={`${movie.Title} poster`} />
-			<h3>{movie.Title}</h3>
+			<img src={movie.poster} alt={`${movie.title} poster`} />
+			<h3>{movie.title}</h3>
 			<div>
 				<p>
 					<span>⭐️</span>

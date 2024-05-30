@@ -23,6 +23,10 @@ function App() {
 		setSelectedId(null);
 	}
 
+	function handleAddWatched(movie) {
+		setWatched((watched) => [...watched, movie]);
+	}
+
 	useEffect(() => {
 		async function fetchMovies() {
 			try {
@@ -73,6 +77,8 @@ function App() {
 						<MovieDetails
 							selectedId={selectedId}
 							onCloseMovie={handleCloseMovie}
+							onAddWatched={handleAddWatched}
+							watched={watched}
 						/>
 					) : (<>
 							<WatchedSummary watched={watched} />
