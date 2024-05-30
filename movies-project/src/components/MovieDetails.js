@@ -10,8 +10,8 @@ const MovieDetails = ({ selectedId, onCloseMovie, onAddWatched, watched }) => {
 	const [error, setError] = useState("");
 	const [userRating, setUserRating] = useState("");
 
-	const isWatched = watched.map((movie) => movie.imdbId).includes(selectedId);
-	const watchedUserRating = watched.find((movie) => movie.imdbId === selectedId)?.userRating;
+	const isWatched = watched.map((movie) => movie.imdbID).includes(selectedId);
+	const watchedUserRating = watched.find((movie) => movie.imdbID === selectedId)?.userRating;
 
 	const {
 		Title: title,
@@ -28,7 +28,7 @@ const MovieDetails = ({ selectedId, onCloseMovie, onAddWatched, watched }) => {
 
 	function handleAdd() {
 		const newWatchedMovie = {
-			imdbId: selectedId,
+			imdbID: selectedId,
 			title,
 			year,
 			poster,

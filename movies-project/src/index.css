@@ -233,6 +233,7 @@ body {
 
 .details img {
 	width: 33%;
+	object-fit: cover;
 }
 
 .details-overview {
@@ -304,4 +305,24 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+
+.btn-delete {
+	position: absolute;
+	right: 2.4rem;
+
+	height: 1.8rem;
+	aspect-ratio: 1;
+	border-radius: 50%;
+	border: none;
+	background-color: var(--color-red);
+	color: var(--color-background-900);
+	font-size: 0.9rem;
+	font-weight: bold;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+.btn-delete:hover {
+	background-color: var(--color-red-dark);
 }
