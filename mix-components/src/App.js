@@ -9,6 +9,7 @@ import Accordion from './components/Accordion';
 import './styles-tab.css';
 import { content as tab_content } from './data-tabs.js';
 import { Tabbed } from "./components/Tabbed.js";
+import CurrencyConverter from "./components/CurrencyConverter.js";
 
 function App() {
 	const [rate, setRate] = useState(0);
@@ -50,9 +51,6 @@ function App() {
 			
 			<StarRating maxRating={5} messages={["Terrible", "Bad", "Okay", "Good", "Amazing"]} onSetRating={setRate} />
 			your rate is {rate}
-			{/*
-			<StarRating maxRating={5} size={24} color="red" className="test" defaultRating={3} />
-			*/}
 		</div>
 
 		<div>
@@ -63,6 +61,11 @@ function App() {
 		<div>
 			<h2>Tabs</h2>
 			<Tabbed content={tab_content} />
+		</div>
+
+		<div>
+			<h2>Currency Converter</h2>
+			<CurrencyConverter />
 		</div>
 	</>);
 }
