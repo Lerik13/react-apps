@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import './index.css';
 import { API_URL } from './constants.js';
 import { ListBox, MovieList } from './components/ListBox.js';
@@ -131,6 +131,22 @@ function Logo() {
 }
 
 function Search({ query, setQuery }) {
+	const inputEl = useRef(null);
+
+	useEffect(() => {
+		function callback(e) {
+			if (document.activeElement === inputEl.current)
+				return;
+			if (e.code === "Enter") {
+				inputEl.current.focus();
+				setQuery("");
+			}
+		}
+
+		document.addEventListener('keydown', callback);
+
+		return () => document.removeEventListener("keydown", callback)
+	}, [setQuery])
 
 	return (
 		<input
@@ -139,6 +155,7 @@ function Search({ query, setQuery }) {
 			placeholder="Search ..."
 			value={query}
 			onChange={(e) => setQuery(e.target.value)}
+			ref={inputEl}
 		/>
 	)
 }
