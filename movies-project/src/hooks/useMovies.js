@@ -44,7 +44,7 @@ export function useMovies (apiUrl, query) {
 		return () => {
 			controller.abort();
 		}
-	}, [query])
+	}, [apiUrl, query])
 
 	return { movies, isLoading, error }
 }
