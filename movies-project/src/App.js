@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef } from "react";
 import './index.css';
 import { API_URL } from './constants.js';
 import { ListBox, MovieList } from './components/ListBox.js';
@@ -8,6 +8,7 @@ import ErrorMessage from "./components/ErrorMessage.js";
 import MovieDetails from "./components/MovieDetails.js";
 import { useMovies } from "./hooks/useMovies.js";
 import { useLocalStorageState } from "./hooks/useLocalStorageState.js";
+import { useKey } from "./hooks/useKey.js";
 
 function App() {
 	const [query, setQuery] = useState("");
@@ -85,20 +86,12 @@ function Logo() {
 function Search({ query, setQuery }) {
 	const inputEl = useRef(null);
 
-	useEffect(() => {
-		function callback(e) {
-			if (document.activeElement === inputEl.current)
-				return;
-			if (e.code === "Enter") {
-				inputEl.current.focus();
-				setQuery("");
-			}
-		}
-
-		document.addEventListener('keydown', callback);
-
-		return () => document.removeEventListener("keydown", callback)
-	}, [setQuery])
+	useKey("Enter", () => {
+		if (document.activeElement === inputEl.current)
+			return;
+		inputEl.current.focus();
+		setQuery("");
+	});
 
 	return (
 		<input
