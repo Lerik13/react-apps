@@ -6,13 +6,13 @@ import { WatchedMoviesList, WatchedSummary } from './components/WatchedBox.js';
 import { Loader } from "./components/Loader.js";
 import ErrorMessage from "./components/ErrorMessage.js";
 import MovieDetails from "./components/MovieDetails.js";
+import { useMovies } from "./hooks/useMovies.js";
 
 function App() {
 	const [query, setQuery] = useState("");
-	const [movies, setMovies] = useState([]);
-	const [isLoading, setIsLoading] = useState(false);
-	const [error, setError] = useState("");
 	const [selectedId, setSelectedId] = useState(null);
+
+	const { movies, isLoading, error } = useMovies(API_URL, query);
 	
 	const [watched, setWatched] = useState(() => {
 		const storedValue = localStorage.getItem('watched');
@@ -38,48 +38,6 @@ function App() {
 	useEffect(() => {
 		localStorage.setItem('watched', JSON.stringify(watched))
 	}, [watched])
-
-	useEffect(() => {
-		const controller = new AbortController();
-
-		async function fetchMovies() {
-			try {
-				setIsLoading(true);
-				setError("");
-				const res = await fetch(`${API_URL}&s=${query}`, { signal: controller.signal });
-	
-				if (!res.ok)
-					throw new Error("Something went wrong with fetching movies")
-	
-				const data = await res.json();
-
-				if (data.Response === 'False')
-					throw new Error("Movie not found");
-
-				setMovies(data.Search);
-			} catch (error) {
-				if (error.name !== "AbortError") {
-					console.log(error.message);
-					setError(error.message);
-				}
-			} finally {
-				setIsLoading(false);
-			}
-		}
-
-		if (query.length < 3) {
-			setMovies([]);
-			setError("")
-			return ;
-		}
-
-		handleCloseMovie();
-		fetchMovies();
-
-		return () => {
-			controller.abort();
-		}
-	}, [query])
 
 	return (
 		<div>
