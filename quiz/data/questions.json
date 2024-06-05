@@ -1,0 +1,46 @@
+{
+	"questions": [
+		{
+			"question": "Though they sound happy, what animal's 'laugh' is a reaction to being threatened?",
+			"options": ["woodepecker", "ox", "hyena", "baboon"],
+			"correctOption": 2,
+			"points": 10
+		},
+		{
+			"question": "Capable of exceeding 186 miles per hour, what is the fastest creature in the animal kingdom?",
+			"options": ["cheetah", "horsefly", "black marlin", "peregrine falcon"],
+			"correctOption": 3,
+			"points": 20
+		},
+		{
+			"question": "Known for its intelligence, which dog breed has been found capable of understanding more than a thousand words?",
+			"options": ["Border Collie", "French Bulldog", "Dachshund", "Cocker Spaniel"],
+			"correctOption": 0,
+			"points": 30
+		},
+		{
+			"question": "Which animal species can live in extremes of both heat and cold, from −20 °F to 120 °F?",
+			"options": ["polar bear", "Bactrian camel", "emperor penguin", "chuckwalla iguanas"],
+			"correctOption": 1,
+			"points": 10
+		},
+		{
+			"question": "The tiniest animal with a backbone is a what?",
+			"options": ["frog", "lizard", "bird", "fish"],
+			"correctOption": 1,
+			"points": 10
+		},
+		{
+			"question": "Growing up to 59 feet (18 meters) long, which is the world’s largest living fish?",
+			"options": ["whale shark", "marlin", "manta ray", "sailfish"],
+			"correctOption": 0,
+			"points": 10
+		},
+		{
+			"question": "Which of these “fish” is actually a fish??",
+			"options": ["starfish", "jellyfish", "crayfish", "swordfish"],
+			"correctOption": 3,
+			"points": 10
+		}
+	]
+}
