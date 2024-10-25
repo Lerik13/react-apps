@@ -25,30 +25,6 @@
       "id": "17806751"
     },
     {
-      "cityName": "Berlin",
-      "country": "Germany",
-      "emoji": "🇩🇪",
-      "date": "2027-02-12T09:24:11.863Z",
-      "notes": "Amazing 😃",
-      "position": {
-        "lat": 52.53586782505711,
-        "lng": 13.376933665713324
-      },
-      "id": "98443197"
-    },
-    {
-      "id": "8e76",
-      "cityName": "Lourdoueix-Saint-Pierre",
-      "country": "France",
-      "emoji": "🇫🇷",
-      "date": "2024-10-25T20:29:23.323Z",
-      "notes": "))))",
-      "position": {
-        "lat": "46.392411189814645",
-        "lng": "1.8676757812500002"
-      }
-    },
-    {
       "id": "4b75",
       "cityName": "Sant Julia de Loria",
       "country": "Andorra",
@@ -61,30 +37,6 @@
       }
     },
     {
-      "id": "97a9",
-      "cityName": "Sant Julia de Loria",
-      "country": "Andorra",
-      "emoji": "🇦🇩",
-      "date": "2024-10-25T22:10:16.461Z",
-      "notes": "cool",
-      "position": {
-        "lat": "42.45588764197166",
-        "lng": "1.5380859375000002"
-      }
-    },
-    {
-      "id": "663e",
-      "cityName": "Latouille-Lentillac",
-      "country": "France",
-      "emoji": "🇫🇷",
-      "date": "2024-10-25T22:15:13.776Z",
-      "notes": "123",
-      "position": {
-        "lat": "44.855868807357275",
-        "lng": "1.9555664062500002"
-      }
-    },
-    {
       "id": "9b5b",
       "cityName": "Buchholterberg",
       "country": "Switzerland",
@@ -94,18 +46,6 @@
       "position": {
         "lat": "46.830133640447414",
         "lng": "7.690429687500001"
-      }
-    },
-    {
-      "id": "f717",
-      "cityName": "Mosnay",
-      "country": "France",
-      "emoji": "🇫🇷",
-      "date": "2024-10-17T22:20:51.000Z",
-      "notes": "aaaa",
-      "position": {
-        "lat": "46.63057868059483",
-        "lng": "1.6149902343750002"
       }
     }
   ]
