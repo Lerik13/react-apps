@@ -12,6 +12,7 @@ import Form from './components/Form';
 import User from './components/User';
 import { AuthProvider } from './contexts/FakeAuthContext';
 import { CitiesProvider } from './contexts/CitiesContext';
+import ProtectedRoute from './pages/ProtectedRoute';
 
 const App = () => {
 
@@ -24,14 +25,18 @@ const App = () => {
 						<Route path="product" element={<Product />} />
 						<Route path="pricing" element={<Pricing />} />
 						<Route path="login" element={<Login />} />
-						<Route path="app" element={<AppLayout />}>
+						<Route path="app" element={
+							<ProtectedRoute>
+								<AppLayout />
+							</ProtectedRoute>
+						}>
 							<Route index element={<Navigate replace to="cities" />} />
 							<Route path="cities" element={<CityList />} />
 							<Route path="cities/:id" element={<City />} />
 							<Route path="countries" element={<CountryList />} />
 							<Route path="form" element={<Form />} />
+							<Route path="user" element={<User />} />
 						</Route>
-						<Route path="user" element={<User />} />
 						<Route path="*" element={<PageNotFound />} />
 
 					</Routes>
