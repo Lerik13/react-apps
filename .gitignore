@@ -6,6 +6,7 @@
 /mix-components/node_modules
 /quiz/node_modules
 /travel-track/node_modules
+/atomic-blog/node_modules
 /.pnp
 .pnp.js
 
