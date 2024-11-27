@@ -17,7 +17,7 @@ function AccountOperations() {
 		isLoading
 	} = useSelector((store) => store.account);
 	
-	console.log(balance);
+	console.log(`currentLoan = ${currentLoan}, currentLoanPurpose = ${currentLoanPurpose}`);
 
 	function handleDeposit() {
 		if (!depositAmount) return;
@@ -65,7 +65,7 @@ function AccountOperations() {
 					</select>
 
 					<button onClick={handleDeposit} disabled={isLoading}>
-						{isLoading ? 'Converting...' : `Deposit {depositAmount}`}
+						{isLoading ? 'Converting...' : `Deposit ${depositAmount}`}
 					</button>
 				</div>
 
