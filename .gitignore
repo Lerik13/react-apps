@@ -9,6 +9,7 @@
 /atomic-blog/node_modules
 /workout-timer/node_modules
 /redux-intro/node_modules
+/fast-react-pizza/node_modules
 /.pnp
 .pnp.js
 
