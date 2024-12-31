@@ -5,7 +5,6 @@ import CartOverview from "../features/cart/CartOverview"
 
 function AppLayout() {
 	const navigation = useNavigation();
-	//console.log(navigation)
 	const isLoading = navigation.state === "loading";
 
 	return (
@@ -15,7 +14,6 @@ function AppLayout() {
 			<Header />
 
 			<main>
-				<h1>Content</h1>
 				<Outlet />
 			</main>
 
