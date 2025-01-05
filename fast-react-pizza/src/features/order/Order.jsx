@@ -65,7 +65,7 @@ function Order() {
           <OrderItem
             item={item}
             key={item.pizzaId}
-            isLoadingIngredients={fetcher.state === "loading"}
+            isLoadingIngredients={fetcher.state === "loading" && !fetcher.data}
             ingredients={
               fetcher?.data?.find((el) => el.id === item.pizzaId).ingredients ??
               []
