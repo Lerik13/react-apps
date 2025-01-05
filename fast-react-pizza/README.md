@@ -1,5 +1,5 @@
 # Fast React Pizza
-*using techs: React, Redux, Tailwind CSS*
+*using techs: React, React Router, Redux Toolkit, Tailwind CSS*
 
 - Very simple application, where users can order one or more pizzas from a menu
 - Requires no user accounts and no login: users just input their names before using the app (display username is diff pages)
@@ -14,3 +14,5 @@
 - Users should be able to mark their order as "priority" order even after it has been placed
 
 API for getting GPS location of user: "https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}"
+
+Test orderID: IIDSAT (search input)
