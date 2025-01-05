@@ -16,3 +16,18 @@
 API for getting GPS location of user: "https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}"
 
 Test orderID: IIDSAT (search input)
+
+Main page:
+![screen image](./screen1.jpg)
+
+Menu page:
+![screen image](./screen2.jpg)
+
+Shopping Cart page:
+![screen image](./screen3.jpg)
+
+Create order form:
+![screen image](./screen4.jpg)
+
+Order page (with active button to make Priority)
+![screen image](./screen5.jpg)
