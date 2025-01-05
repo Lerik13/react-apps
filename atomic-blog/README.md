@@ -1,6 +1,8 @@
 # Blog app
 *@faker-js/faker - generate random sentences, phrases for creating posts*
+
 *using techs: React, Context API*
+
 *useMemo, memo - for optimization*
 
 - feature: Dark-mode of page
