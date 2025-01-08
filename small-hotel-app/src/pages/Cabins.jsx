@@ -1,17 +1,18 @@
-import { useEffect } from 'react'
 import Row from '../ui/Row'
 import Heading from '../ui/Heading'
-import { getCabins } from '../services/apiCabins'
+import CabinTable from '../features/cabins/CabinTable'
 
 function Cabins() {
-  useEffect(() => {
-    getCabins().then((data) => console.log(data))
-  }, [])
-
   return (
-    <Row type="horizontal">
-      <Heading as="h1">All Cabins</Heading>
-    </Row>
+    <>
+      <Row type="horizontal">
+        <Heading as="h1">All Cabins</Heading>
+        <p>Filter / Sort</p>
+      </Row>
+      <Row>
+        <CabinTable />
+      </Row>
+    </>
   )
 }
 

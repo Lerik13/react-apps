@@ -15,7 +15,8 @@ import PageNotFound from './pages/PageNotFound'
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      staleTime: 60 * 1000,
+      //staleTime: 60 * 1000, // 1 min = amount of time that data in the cache will stay fresh, until refetch again
+      staleTime: 0,
     },
   },
 })
