@@ -36,7 +36,7 @@ function CabinTable() {
     data: cabins,
     //error,
   } = useQuery({
-    queryKey: [],
+    queryKey: ['cabins'],
     queryFn: getCabins,
   })
 
