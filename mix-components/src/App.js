@@ -12,6 +12,7 @@ import { content as tab_content } from './data-tabs.js'
 import { Tabbed } from './components/Tabbed.js'
 import CurrencyConverter from './components/CurrencyConverter.js'
 import { RenderPropsDemo, HOCDemo } from './components/RenderPropsDemo.js'
+import Counter from './components/Counter.js'
 
 function App() {
   const [rate, setRate] = useState(0)
@@ -80,6 +81,37 @@ function App() {
         <RenderPropsDemo /> */}
         <h2>Demo of HOC (Higher-Order Component)</h2>
         <HOCDemo />
+      </div>
+
+      <div>
+        <h2>Compound Component Pattern</h2>
+        <p>
+          Problem: Prop explosion (not enough flexibility to configure
+          component)
+        </p>
+        {/*<Counter
+          iconIncrease="+"
+          iconDecrease="-"
+          label="My NOT so flexible counter"
+          hideLabel={false}
+          hideIncrease={false}
+          hideDecrease={false}
+          posiotionCount="top"
+        />*/}
+        <Counter>
+          <Counter.Label>My super flexible counter:</Counter.Label>
+          <Counter.Count />
+          <Counter.Decrease icon="-" />
+          <Counter.Increase icon="+" />
+        </Counter>
+        <br />
+        <Counter>
+          <Counter.Decrease icon="◀️" />
+          <div>
+            <Counter.Count />
+          </div>
+          <Counter.Increase icon="▶️" />
+        </Counter>
       </div>
     </>
   )

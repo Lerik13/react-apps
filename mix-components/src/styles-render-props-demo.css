@@ -99,7 +99,7 @@
   font-weight: 700;
 }
 
-.render-props-container .company-phrase {
+.render-props-container.company-phrase {
   margin-top: 6px;
   font-size: 14px;
   color: rebeccapurple;
