@@ -12,10 +12,10 @@ export async function getSettings() {
 }
 
 // We expect a newSetting object: { setting: newValue }
-export async function updateSettings(newSettings) {
+export async function updateSetting(newSetting) {
   const { data, error } = await supabase
     .from('settings')
-    .update(newSettings)
+    .update(newSetting)
     .eq('id', 1) // there is only 1 row in the settings with id=1
     .single()
 
