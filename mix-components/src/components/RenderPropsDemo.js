@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { faker } from '@faker-js/faker'
+import withToggles from './HOC'
 
 const products = Array.from({ length: 20 }, () => {
   return {
@@ -73,7 +74,7 @@ function List({ title, items, render }) {
   )
 }
 
-function RenderPropsDemo() {
+export function RenderPropsDemo() {
   return (
     <div className="render-props-container">
       <div className="col-2">
@@ -111,4 +112,15 @@ function ProductList({ title, items }) {
   )
 }
 
-export default RenderPropsDemo
+export function HOCDemo() {
+  const ProductListWithToggles = withToggles(ProductList)
+
+  return (
+    <div className="render-props-container">
+      <div className="col-2">
+        <ProductList title="Products HOC" items={products} />
+        <ProductListWithToggles title="Products HOC" items={products} />
+      </div>
+    </div>
+  )
+}

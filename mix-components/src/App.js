@@ -11,7 +11,7 @@ import Accordion from './components/Accordion'
 import { content as tab_content } from './data-tabs.js'
 import { Tabbed } from './components/Tabbed.js'
 import CurrencyConverter from './components/CurrencyConverter.js'
-import RenderPropsDemo from './components/RenderPropsDemo.js'
+import { RenderPropsDemo, HOCDemo } from './components/RenderPropsDemo.js'
 
 function App() {
   const [rate, setRate] = useState(0)
@@ -76,8 +76,10 @@ function App() {
       </div>
 
       <div>
-        <h2>Render Props Demo</h2>
-        <RenderPropsDemo />
+        {/*<h2>Render Props Demo</h2>
+        <RenderPropsDemo /> */}
+        <h2>Demo of HOC (Higher-Order Component)</h2>
+        <HOCDemo />
       </div>
     </>
   )
