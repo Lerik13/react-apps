@@ -45,7 +45,7 @@ function CompanyItem({ company, defaultVisibility }) {
   )
 }
 
-function List({ title, items }) {
+function List({ title, items, render }) {
   const [isOpen, setIsOpen] = useState(true)
   const [isCollapsed, setIsCollapsed] = useState(false)
 
@@ -64,13 +64,7 @@ function List({ title, items }) {
           {isOpen ? <span>&or;</span> : <span>&and;</span>}
         </button>
       </div>
-      {isOpen && (
-        <ul className="list">
-          {displayItems.map((product) => (
-            <ProductItem key={product.productName} product={product} />
-          ))}
-        </ul>
-      )}
+      {isOpen && <ul className="list">{displayItems.map(render)}</ul>}
 
       <button onClick={() => setIsCollapsed((isCollapsed) => !isCollapsed)}>
         {isCollapsed ? `Show all ${items.length}` : 'Show less'}
@@ -83,7 +77,24 @@ function RenderPropsDemo() {
   return (
     <div className="render-props-container">
       <div className="col-2">
-        <List title="Products" items={products} />
+        <List
+          title="Products"
+          items={products}
+          render={(product) => (
+            <ProductItem key={product.productName} product={product} />
+          )}
+        />
+        <List
+          title="Companies"
+          items={companies}
+          render={(company) => (
+            <CompanyItem
+              key={company.companyName}
+              company={company}
+              defaultVisibility={false}
+            />
+          )}
+        />
       </div>
     </div>
   )
