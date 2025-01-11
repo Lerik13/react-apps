@@ -77,9 +77,12 @@ function App() {
       </div>
 
       <div>
-        {/*<h2>Render Props Demo</h2>
-        <RenderPropsDemo /> */}
-        <h2>Demo of HOC (Higher-Order Component)</h2>
+        <h2>Render Props Pattern</h2>
+        <RenderPropsDemo />
+      </div>
+
+      <div>
+        <h2>Higher-Order Component Pattern (HOC)</h2>
         <HOCDemo />
       </div>
 
@@ -107,9 +110,7 @@ function App() {
         <br />
         <Counter>
           <Counter.Decrease icon="◀️" />
-          <div>
-            <Counter.Count />
-          </div>
+          <Counter.Count />
           <Counter.Increase icon="▶️" />
         </Counter>
       </div>
