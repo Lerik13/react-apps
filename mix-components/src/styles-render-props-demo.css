@@ -1,0 +1,106 @@
+.render-props-container {
+	margin: 32px;
+  color: #333;
+}
+
+.render-props-container .col-2 {
+  display: flex;
+  gap: 32px;
+}
+
+.render-props-container .col-2 > * {
+  width: 50%;
+}
+
+.render-props-container .list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: #f7f7f7;
+  padding: 12px;
+  border-radius: 7px;
+  border: 1px solid #ddd;
+}
+
+.render-props-container .list-container {
+  width: 100%;
+}
+
+.render-props-container .list-container > button {
+  display: none;
+}
+
+.render-props-container .list-container:has(.list) > button {
+  display: block;
+  width: 100px;
+  margin: 16px auto 0 auto;
+
+  background-color: rebeccapurple;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.render-props-container .heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.render-props-container .heading button {
+  font-size: 24px;
+  color: rebeccapurple;
+  font-weight: bold;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.render-props-container .product {
+  display: grid;
+  grid-template-columns: 1fr 64px;
+  gap: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 12px 16px;
+}
+
+.render-props-container .product-name {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.render-props-container .product-price {
+  text-align: right;
+  font-weight: 700;
+  color: rebeccapurple;
+}
+
+.render-props-container .product-description {
+  grid-column: -1 /1;
+  font-size: 14px;
+  color: #666;
+}
+
+.render-props-container .company {
+  padding-bottom: 12px;
+  border-bottom: 1px solid #ddd;
+
+  /* border: 1px solid rebeccapurple;
+  border-radius: 5px;
+  padding: 12px 16px; */
+}
+
+.render-props-container .company-name {
+  font-weight: 700;
+}
+
+.render-props-container .company-phrase {
+  margin-top: 6px;
+  font-size: 14px;
+  color: rebeccapurple;
+}
