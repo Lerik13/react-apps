@@ -33,7 +33,7 @@ function CreateCabinForm({ cabinToEdit = {}, onCloseModal }) {
         {
           onSuccess: () => {
             reset()
-            ;() => onCloseModal?.()
+            onCloseModal?.()
           },
         }
       )
@@ -43,7 +43,7 @@ function CreateCabinForm({ cabinToEdit = {}, onCloseModal }) {
         {
           onSuccess: (data) => {
             reset()
-            ;() => onCloseModal?.()
+            onCloseModal?.()
           },
         }
       )
