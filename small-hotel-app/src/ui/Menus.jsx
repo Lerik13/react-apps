@@ -145,7 +145,7 @@ function Button({ children, icon, onClick }) {
     <li>
       <StyledButton onClick={handleClick}>
         {icon}
-        <span>{children}</span>
+        <span style={{ textWrap: 'nowrap' }}>{children}</span>
       </StyledButton>
     </li>
   )
