@@ -10,11 +10,11 @@ import Spinner from '../../ui/Spinner'
 import Checkbox from '../../ui/Checkbox'
 import { formatCurrency } from '../../utils/helpers'
 import BookingDataBox from '../../features/bookings/BookingDataBox'
+import { useSettings } from '../settings/useSettings'
 
 import { useMoveBack } from '../../hooks/useMoveBack'
 import { useBooking } from '../bookings/useBooking'
 import { useCheckin } from './useCheckin'
-import { useSettings } from '../settings/useSettings'
 
 const Box = styled.div`
   background-color: var(--color-grey-0);
