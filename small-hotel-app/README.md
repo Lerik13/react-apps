@@ -9,6 +9,11 @@ This is internal app used inside the hotel to check in guests as they arrive.
 API (todo: build)
 Later: customer-facing website as well, where customers will be able to book stays, using the same API
 
+Login: 
+	username: alisa@test.com
+	password: test123
+
+
 ### Requirements:
 - Users of the app are hotel employees. They need to be logged into the application to perform tasks
 - New users can only be signed up inside the application (to guarantee that only actual hotel employees can get accounts)
