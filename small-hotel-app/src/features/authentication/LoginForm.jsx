@@ -15,7 +15,16 @@ function LoginForm() {
     e.preventDefault()
     if (!email || !password) return
 
-    login({ email, password })
+    login(
+      { email, password },
+      {
+        // in case of error, clear all input fields
+        onSettled: () => {
+          setEmail('')
+          setPassword('')
+        },
+      }
+    )
   }
 
   return (
