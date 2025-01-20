@@ -10,8 +10,8 @@ API (todo: build)
 Later: customer-facing website as well, where customers will be able to book stays, using the same API
 
 Login: 
-	username: alisa@test.com
-	password: test123
+	username: lera@test.com
+	password: lera12345
 
 
 ### Requirements:
