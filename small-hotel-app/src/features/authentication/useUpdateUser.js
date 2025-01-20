@@ -10,7 +10,6 @@ export function useUpdateUser() {
     mutationFn: updateCurrentUser,
     onSuccess: () => {
       toast.success('User account successfully updated')
-      //queryClient.setQueryData('user', user) // if the cache not renew, put the data in the cache manually
       queryClient.invalidateQueries({ queryKey: ['user'] })
     },
     onError: (err) => toast.error(err.message),
