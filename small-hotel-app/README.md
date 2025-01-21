@@ -1,6 +1,6 @@
 # Small Hotel App *(internal app used inside the hotel)*
-*using techs: React, ReactRouter for routing, Styled Components for styling, ReactQuery for remote state management, Context API as UI state management, React Hook Form as form management*
-*Supabase - for creating API and DB (remote state)*
+*using Techs: React, ReactRouter for routing, Styled Components for styling, ReactQuery for remote state management, Context API as UI state management, React Hook Form as form management*
+*Supabase - Backend: for creating API and DB (remote state)*
 *Other tools: React icons, React hot toast for notification, Recharts, date-fns*
 
 A small boutique hotel with 8 luxurious wooden cabins.
@@ -9,7 +9,7 @@ This is internal app used inside the hotel to check in guests as they arrive.
 API (todo: build)
 Later: customer-facing website as well, where customers will be able to book stays, using the same API
 
-Login: 
+Test User: 
 	username: lera@test.com
 	password: lera12345
 
@@ -61,3 +61,14 @@ Login:
 7. Login		*/login*
 8. Account settings		*/account*
 
+![screen image](screen-1.jpg)
+
+![screen image](screen-2.jpg)
+
+![screen image](screen-3.jpg)
+
+![screen image](screen-4.jpg)
+
+![screen image](screen-5.jpg)
+
+![screen image](screen-6.jpg)
