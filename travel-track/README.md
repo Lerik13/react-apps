@@ -1,8 +1,19 @@
-# React + Vite
+# WorldWise app - tracker of your travel experience
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+*using techs: React + Vite*
+*libs:*
+*- leaflet, react-leaflet - Map library*
+*- react-datepicker - inputbox: dropbox calendar*
+*Server (fake API): json-file 'data/cities.json'*
 
-Currently, two official plugins are available:
+App that allow user to save cities and countries which user visited with comments about this place.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+feature: Easy navigation by clicking on map and saving location
+
+Login Page with fake user: "user@example.com" (password: "qwerty")
+
+![screen image](screen-1.jpg)
+
+![screen image](screen-2.jpg)
+
+![screen image](screen-3.jpg)

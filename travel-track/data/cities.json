@@ -35,6 +35,18 @@
         "lat": "42.45588764197166",
         "lng": "1.5380859375000002"
       }
+    },
+    {
+      "id": "f5cd",
+      "cityName": "Parkland County",
+      "country": "Canada",
+      "emoji": "🇨🇦",
+      "date": "2024-12-11T00:08:08.000Z",
+      "notes": "boring place",
+      "position": {
+        "lat": "53.59494998253459",
+        "lng": "-114.71923828125001"
+      }
     }
   ]
 }
