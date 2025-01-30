@@ -10,6 +10,7 @@
 /workout-timer/node_modules
 /redux-intro/node_modules
 /fast-react-pizza/node_modules
+/manual-ssr/node_modules
 /.pnp
 .pnp.js
 
